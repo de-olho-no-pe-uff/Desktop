@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\User\Dashboard;
 use App\Livewire\User\Login;
 use App\Livewire\User\Register;
 use Illuminate\Support\Facades\Route;
@@ -10,6 +11,7 @@ Route::get('/', function () {
 
 Route::get('/login', Login::class)->name('login');
 Route::get('/register', Register::class)->name('register');
+Route::get('/user/dashboard', Dashboard::class)->name('dashboard');
 
 Route::get('/hora', function () {
     return response()->json([
