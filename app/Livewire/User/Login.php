@@ -5,6 +5,7 @@ namespace App\Livewire\User;
 
 use Firebase\JWT\JWT;
 use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 use Kreait\Firebase\Auth;
 use Livewire\Component;
 
@@ -16,8 +17,9 @@ class Login extends Component
     public $password;
 
 
-    public function login()
+    public function login(Request $request)
     {
+
         try {
             // Inicio da autenticação
             $auth = app('firebase.auth');
